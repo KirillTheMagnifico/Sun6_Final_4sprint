@@ -1,0 +1,4 @@
+
+.DS_Store
+pyvenv.cfg
+tests/geckodriver.log
