@@ -2,8 +2,8 @@ from selenium.webdriver.common.by import By
 class OrderPageLocators:
 
     inputs = [By.XPATH, "//input[contains(@class, 'Input_Responsible__1jDKN')]"]
-    metro_station_input = [By.CLASS_NAME, 'select-search__input']
-    metro_station = [By.CLASS_NAME, 'select-search__row']
+    metro_station_input = [By.XPATH, "//input[contains(@placeholder, '* Станция метро')]"]
+    metro_station = [By.XPATH, '//li[@class = "select-search__row"][1]']
     next_button = [By.XPATH, "//button[contains(text(), 'Далее')]"]
     second_page = [By.XPATH, "//input[contains(@class, 'Input_Responsible__1jDKN')]"]
     date = [By.XPATH, "//div[contains(@class, 'react-datepicker__day--selected')]"]
