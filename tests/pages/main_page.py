@@ -17,6 +17,7 @@ class MainPage:
     def click_scooter_logo(self):
         self.driver.find_element(*MainPageLocators.locator_samokat_logo).click()
 
+
     @allure.step('Нажать Куки.')
     def click_close_cookie(self):
         self.driver.find_element(*MainPageLocators.locator_cookie_button).click()
@@ -33,7 +34,7 @@ class MainPage:
     def click_question_one(self):
         last_element = self.driver.find_element(*MainPageLocators.locator_question_eight_element)
         self.driver.execute_script('arguments[0].scrollIntoView();', last_element)
-        element = WebDriverWait(self.driver, 15).until(ec.visibility_of_element_located(MainPageLocators.locator_question_one_element))
+        element = WebDriverWait(self.driver, 30).until(ec.visibility_of_element_located(MainPageLocators.locator_question_one_element))
         element.click()
 
     @allure.step('Клик по второму вопросу')
@@ -87,33 +88,33 @@ class MainPage:
 
     @allure.step('Ответ на первый вопрос')
     def get_answer_one(self):
-        return WebDriverWait(self.driver, 5).until(
+        return WebDriverWait(self.driver, 15).until(
             ec.visibility_of_element_located(*MainPageLocators.locator_answer_one_element)).text
 
     @allure.step('Ответ на второй вопрос')
     def get_answer_two(self):
-        return WebDriverWait(self.driver, 5).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_two_element)).text
+        return WebDriverWait(self.driver, 15).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_two_element)).text
 
     @allure.step('Ответ на третий вопрос')
     def get_answer_three(self):
-        return WebDriverWait(self.driver, 5).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_three_element)).text
+        return WebDriverWait(self.driver, 15).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_three_element)).text
 
     @allure.step('Ответ на четвертый вопрос')
     def get_answer_four(self):
-        return WebDriverWait(self.driver, 10).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_four_element)).text
+        return WebDriverWait(self.driver, 15).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_four_element)).text
 
     @allure.step('Ответ на пятый вопрос')
     def get_answer_five(self):
-        return WebDriverWait(self.driver, 10).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_five_element)).text
+        return WebDriverWait(self.driver, 15).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_five_element)).text
 
     @allure.step('Ответ на шестой вопрос')
     def get_answer_six(self):
-        return WebDriverWait(self.driver, 10).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_six_element)).text
+        return WebDriverWait(self.driver, 15).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_six_element)).text
 
     @allure.step('Ответ на седьмой вопрос')
     def get_answer_seven(self):
-        return WebDriverWait(self.driver, 10).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_seven_element)).text
+        return WebDriverWait(self.driver, 15).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_seven_element)).text
 
     @allure.step('Ответ на восьмой вопрос')
     def get_answer_eight(self):
-        return WebDriverWait(self.driver, 10).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_eight_element)).text
+        return WebDriverWait(self.driver, 15).until(ec.visibility_of_element_located(MainPageLocators.locator_answer_eight_element)).text
